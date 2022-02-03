@@ -1,0 +1,4 @@
+#!/bin/sh
+
+file="$(tree -fai /home/magnu/Studies | fzf)"
+cat $file | xclip -i -selection clipboard

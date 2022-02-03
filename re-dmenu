@@ -1,0 +1,7 @@
+#!/bin/sh
+
+#A script for when dmenu is being an ass and doesn't show all paths
+
+rm ~/.cache/dmenu_run 
+
+dmenu_run

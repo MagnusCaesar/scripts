@@ -1,0 +1,9 @@
+#!/bin/sh
+
+#viewer=$(echo -e "zathura\nokular"  | dmenu -c -i -p "Viewer?") ; cd ~/Studies/ ;$viewer "$(tree -fai /home/magnu/Studies |grep .pdf | dmenu -i -c -g 2 -l 15)"
+
+# add a -e flag for echo when sh is not dash, and remove it for dash
+viewer=$(echo "zathura\nokular"  | dmenu -c -i -p "Viewer?") ; cd ~/Studies/; $viewer "$(find -L -type f | grep .pdf | dmenu -i -c -g 2 -l 15 -h 20)"
+
+# to make multi files with dmenu and put them in " "s but zathura doesn't work 
+#find -L -type f | grep .pdf | dmenu -i -c -g 2 -l 15 -h 50 | sed ':a;N;$!ba;s/\n/ /g' | sed 's/\.\//"\.\//g'| sed 's/\.pdf/\.pdf"/g' 

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cd /tmp
+img=/tmp/$(ls -t | grep CopyQ )
+curl -F'file=@$img' 0x0.st | xclip -selection c -i

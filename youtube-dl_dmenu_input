@@ -1,0 +1,3 @@
+#!/bin/sh
+
+dir=$(echo -e "yt\nanime" | dmenu -c -p "Directory?") ; cd ~/Videos/$dir ;url=$(xclip -o) ; youtube-dl $url ; /usr/bin/notfy-send "DOWNLOAD INITIATED"

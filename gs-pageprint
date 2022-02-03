@@ -1,0 +1,5 @@
+#!/bin/sh
+
+read pages
+gs -sPageList=$pages -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dSAFER  -sOutputFile=out.pdf $(fzf)
+

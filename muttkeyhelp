@@ -1,0 +1,3 @@
+#!/bin/sh
+
+alacritty -e bat /usr/share/mutt-wizard/mutt-wizard.muttrc
